@@ -1,0 +1,24 @@
+---------------------Phaser Notes------------------------
+Snippets
+    -Code to add a star at the center of the screen
+        this.add.image(game_width / 2, game_height / 2, 'star')
+
+General Notes
+    -Phaser images are layered in the order that they are added
+    -Physics bodies (there are two types)
+        -dynamic: 
+            -Can move around via forces of acceleration or velocity,
+            -Can bounce and collide with other objects
+            -Collisions are influenced by the mass of the body and other elements
+        -static:
+            -Just has a position and a size
+            -Isn't touched by gravity
+            -You can't set velocity on it
+            -When something collides with it, it doesn't move
+    -Groups
+        -Allow you to group together similar objects and control them as a signel unit
+        -Can check for collision between a Group and other game objects
+        -Capable of creating their own Game Objects via create() and other functions
+        
+    -Physics Groups
+        -Automatically create physics enabled children
