@@ -1,10 +1,6 @@
 
     console.log("You've started the game")
 
-    // The "type" member of config 
-    //  -Can be Phaser.Auto, Phaser.WebGL, or Phaser.Canvas
-    //  -Phaser.Auto first tries to use WebGL, then falls back to canvas
-
     var game_width = 800;
     var game_height = 600;
     var score = 0  // The actual score of the game
@@ -87,11 +83,7 @@
         player.setBounce(0.2);
 
         // Player can't run outside of the screen area
-        player.setCollideWorldBounds(true);
-
-        // Set the vertical gravity of the player
-        //   -Higher values mean more intense gravity
-        // player.body.setGravityY(300)  
+        player.setCollideWorldBounds(true); 
 
         // Set a collider between the player and the platforms
         this.physics.add.collider(player, platforms);
@@ -235,8 +227,6 @@
 
         }
     }
-
-    
 
     function update ()
     {

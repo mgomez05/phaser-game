@@ -1,7 +1,9 @@
 ---------------------Phaser Notes------------------------
 Snippets
-    -Code to add a star at the center of the screen
+    -Add an object (a star in this case) to the center of the screen
         this.add.image(game_width / 2, game_height / 2, 'star')
+    -Set the vertical gravity of the player (Higher values mean more intense gravity)
+        player.body.setGravityY(300)     
 
 General Notes
     -Phaser images are layered in the order that they are added
@@ -22,3 +24,7 @@ General Notes
         
     -Physics Groups
         -Automatically create physics enabled children
+    -Config 
+        -"type" Attribute
+            -Can be Phaser.Auto, Phaser.WebGL, or Phaser.Canvas
+            -Phaser.Auto first tries to use WebGL, then falls back to canvas
